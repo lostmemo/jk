@@ -2,15 +2,48 @@
 <html>
 <head>
 
-	<!-- jquery cdn -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
-</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script>
+
 $(document).ready(function(){
-	alert("TEST")
-})
+  $("#yourButtonId").click(function(){
+   document.getElementById("b").value = document.getElementById("b").value+"1";
+   document.getElementById("c").innerHTML = document.getElementById("c").innerHTML.replace(/&nbsp;/gi," # ")+"!!!";
+   
+   
+   //$("#div1").load("test.txt");
+   var SoundFile;
+   SoundFile = new Audio("sndd.wav");
+   SoundFile.play();
+  });
+  
+  $("#button2").click(function(){
+   document.getElementById("c").innerHTML = document.getElementById("c").innerHTML.replace(/&nbsp;/gi," # ")+"???";
+   var SoundFile;
+   SoundFile = new Audio("snddd.wav");
+   SoundFile.play();
+  });
+});
+
+
+var req;
+var btcStr = "1";
+
+
 </script>
+</head>
 <body>
-	테스트 페이지 입니다
+&nbsp;TEST
+<div id="c">&nbsp;TEST&nbsp;TST&nbsp;</div>
+<div id="d">dd</div>
+<div id="div1"><h2> A</h2></div>
+<button id="yourButtonId">come</button>
+<button id="button2">ss</button>
+<input type="text" id="b" value="">
 </body>
 </html>
+
+<audio>
+<source src="sndd.wav">
+<source src="snddd.wav">
+</audio>
