@@ -23,6 +23,12 @@ $(document).ready(function(){
    SoundFile = new Audio("snddd.wav");
    SoundFile.play();
   });
+  
+  $("#button3").click(function(){
+   var SoundFile;
+   SoundFile = new Audio("mok.m4a");
+   SoundFile.play();
+  });
 });
 
 
@@ -39,12 +45,14 @@ var btcStr = "1";
 <div id="div1"><h2> A</h2></div>
 <button id="yourButtonId">come</button>
 <button id="button2">ss</button>
+<button id="button3">M</button>
 <input type="text" id="b" value="">
 </body>
 
 <audio>
 <source src="./sndd.wav">
 <source src="./snddd.wav">
+<source src="./mok.m4a">
 </audio>
 
 </html>
