@@ -1,26 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script>
-
 $(document).ready(function(){
-  $("#yourButtonId").click(function(){
-   document.getElementById("b").value = document.getElementById("b").value+"1";
-   document.getElementById("c").innerHTML = document.getElementById("c").innerHTML.replace(/&nbsp;/gi," # ")+"!!!";
-   
-   
-   //$("#div1").load("test.txt");
+  $("#button1").click(function(){
    var SoundFile;
-   SoundFile = new Audio("./sndd.wav");
+   SoundFile = new Audio("sorry.m4a");
    SoundFile.play();
   });
   
   $("#button2").click(function(){
-   document.getElementById("c").innerHTML = document.getElementById("c").innerHTML.replace(/&nbsp;/gi," # ")+"???";
    var SoundFile;
-   SoundFile = new Audio("snddd.wav");
+   SoundFile = new Audio("eudi.m4a");
    SoundFile.play();
   });
   
@@ -29,30 +21,48 @@ $(document).ready(function(){
    SoundFile = new Audio("mok.m4a");
    SoundFile.play();
   });
+  
+  $("#button4").click(function(){
+   var SoundFile;
+   SoundFile = new Audio("gab.m4a");
+   SoundFile.play();
+    
+  $("#button5").click(function(){
+   var SoundFile;
+   SoundFile = new Audio("bukk.m4a");
+   SoundFile.play();
+  });
+  
+  $("#button6").click(function(){
+   var SoundFile;
+   SoundFile = new Audio("gajang.m4a");
+   SoundFile.play();  
+  });
 });
-
-
-var req;
-var btcStr = "1";
 
 
 </script>
 </head>
 <body>
-&nbsp;TEST
-<div id="c">&nbsp;TEST&nbsp;TST&nbsp;</div>
-<div id="d">dd</div>
-<div id="div1"><h2> A</h2></div>
-<button id="yourButtonId">come</button>
-<button id="button2">ss</button>
-<button id="button3">M</button>
-<input type="text" id="b" value="">
+<div id="c"><font size="20px">JK</font>
+</div>
+
+<div id="div1"><h2>&nbsp;</h2></div>
+<button id="button1"><font size="20px">S</font></button>
+<button id="button2"><font size="20px">E</font></button>
+<button id="button3"><font size="20px">M</font></button>
+<button id="button4"><font size="20px">G</font></button>
+<button id="button3"><font size="20px">B</font></button>
+<button id="button4"><font size="20px">J</font></button>  
 </body>
 
 <audio>
-<source src="./sndd.wav">
-<source src="./snddd.wav">
+<source src="./sorry.m4a">
+<source src="./eudi.m4a">
 <source src="./mok.m4a">
+<source src="./gab.m4a">
+<source src="./bukk.m4a">
+<source src="./gajang.m4a">
 </audio>
 
 </html>
