@@ -12,7 +12,8 @@ $(document).ready(function(){
   var SoundFile6 = new Audio("gajang.m4a");
   
   $("#button1").click(function(){
-   SoundFile1.play();
+   //SoundFile1.play();
+    $("audio")[0].play();
   });
   
   $("#button2").click(function(){
@@ -52,4 +53,7 @@ $(document).ready(function(){
 </div>  
 </body>
 
+<audio src="mok.m4a"></audio>
+  
+  
 </html>
