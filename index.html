@@ -7,6 +7,9 @@ $(document).ready(function(){
   var SoundFile1 = new Audio("sorry.m4a");
   var SoundFile2 = new Audio("eudi.m4a");
   var SoundFile3 = new Audio("mok.m4a");
+  var SoundFile4 = new Audio("gab.m4a");
+  var SoundFile5 = new Audio("bukk.m4a");
+  var SoundFile6 = new Audio("gajang.m4a");
   
   $("#button1").click(function(){
    SoundFile1.play();
@@ -21,21 +24,15 @@ $(document).ready(function(){
   });
   
   $("#button4").click(function(){
-   var SoundFile;
-   SoundFile = new Audio("gab.m4a");
-   SoundFile.play();
+   SoundFile4.play();
   });
   
   $("#button5").click(function(){
-   var SoundFile;
-   SoundFile = new Audio("bukk.m4a");
-   SoundFile.play();
+   SoundFile5.play();
   });
   
   $("#button6").click(function(){
-   var SoundFile;
-   SoundFile = new Audio("gajang.m4a");
-   SoundFile.play();  
+   SoundFile6.play();  
   });
 });
 </script>
@@ -54,14 +51,5 @@ $(document).ready(function(){
 <button id="button6" style="font-size:50px">J</button>
 </div>  
 </body>
-
-<audio>
-<source src="./sorry.m4a">
-<source src="./eudi.m4a">
-<source src="./mok.m4a">
-<source src="./gab.m4a">
-<source src="./bukk.m4a">
-
-</audio>
 
 </html>
