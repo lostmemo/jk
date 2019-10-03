@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+      html,body {height: 100%; overflow:hidden;}
+      table {border:1px dotted red;}
+      img {max-height:100%; width:auto;}
+  </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script>
+
 $(document).ready(function(){
   var SoundFile1 = new Audio("sorry.m4a");
   var SoundFile2 = new Audio("eudi.m4a");
@@ -12,38 +18,38 @@ $(document).ready(function(){
   var SoundFile6 = new Audio("gajang.m4a");
   
   $("#button1").click(function(){
-    document.getElementById("jk1").style = "display:inline";
+    document.getElementById("jk1").style = "height: 90%; width: auto; display:inline";
     SoundFile1.play();
   });
 
   $("#button2").click(function(){
-    document.getElementById("jk2").style = "display:inline";
+    document.getElementById("jk2").style = "height: 90%; width: auto; display:inline";
     SoundFile2.play();
   });
   
   $("#button3").click(function(){
-    document.getElementById("jk3").style = "display:inline";
+    document.getElementById("jk3").style = "height: 90%; width: auto; display:inline";
     SoundFile3.play();
   });
   
   $("#button4").click(function(){
-    document.getElementById("jk4").style = "display:inline";
+    document.getElementById("jk4").style = "height: 90%; width: auto; display:inline";
     SoundFile4.play();
   });
   
   $("#button5").click(function(){
-    document.getElementById("jk5").style = "display:inline";
+    document.getElementById("jk5").style = "height: 90%; width: auto; display:inline";
     SoundFile5.play();
   });
   
   $("#button6").click(function(){
-    document.getElementById("jk6").style = "display:inline";
+    document.getElementById("jk6").style = "height: 90%; width: auto; display:inline";
     SoundFile6.play();  
   });
 
   SoundFile1.addEventListener('ended', function(){
     document.getElementById("jk1").style = "display:none";
-  });
+  });//style="max-width: 100%; height: auto;"
 
   SoundFile2.addEventListener('ended', function(){
     document.getElementById("jk2").style = "display:none";
@@ -69,24 +75,32 @@ $(document).ready(function(){
   
 </head>
 <body>
-
-<div id="pic" style="height:500px; width:300px;">
-  <img id="jk1" src="jk1.jpeg" height="480px" width="270px" style="display:none">
-  <img id="jk2" src="jk2.jpeg" height="480px" width="270px" style="display:none">
-  <img id="jk3" src="jk3.jpeg" height="480px" width="270px" style="display:none">
-  <img id="jk4" src="jk4.jpeg" height="480px" width="270px" style="display:none">
-  <img id="jk5" src="jk5.jpeg" height="480px" width="270px" style="display:none">
-  <img id="jk6" src="jk6.jpeg" height="480px" width="270px" style="display:none">
-</div>
-
-<div id="div1" style="height:50;">
-<button id="button1" style="font-size:50px">S</button>
-<button id="button2" style="font-size:50px">E</button>
-<button id="button3" style="font-size:50px">M</button>
-<button id="button4" style="font-size:50px">G</button>
-<button id="button5" style="font-size:50px">B</button>
-<button id="button6" style="font-size:50px">J</button>
-</div>  
+<table style="height:95%;width:95%">
+  <tr>
+    <th>
+      <div id="pic">
+        <img id="jk1" src="jk1.jpeg" style="display:none">
+        <img id="jk2" src="jk2.jpeg" style="display:none">
+        <img id="jk3" src="jk3.jpeg" style="display:none">
+        <img id="jk4" src="jk4.jpeg" style="display:none">
+        <img id="jk5" src="jk5.jpeg" style="display:none">
+        <img id="jk6" src="jk6.jpeg" style="display:none">
+      </div>
+    </th>
+  </tr>
+  <tr style="height:50px">
+    <th>
+        <div id="div1" align="" style="height:50px;">
+          <button id="button1" style="font-size:50px">S</button>
+          <button id="button2" style="font-size:50px">E</button>
+          <button id="button3" style="font-size:50px">M</button>
+          <button id="button4" style="font-size:50px">G</button>
+          <button id="button5" style="font-size:50px">B</button>
+          <button id="button6" style="font-size:50px">J</button>
+        </div> 
+    </th>
+  </tr>
+</table>
 </body>
   
 </html>
