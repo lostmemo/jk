@@ -12,34 +12,71 @@ $(document).ready(function(){
   var SoundFile6 = new Audio("gajang.m4a");
   
   $("#button1").click(function(){
-   SoundFile1.play();
+    document.getElementById("jk1").style = "display:inline";
+    SoundFile1.play();
   });
-  
+
   $("#button2").click(function(){
-   SoundFile2.play();
+    document.getElementById("jk2").style = "display:inline";
+    SoundFile2.play();
   });
   
   $("#button3").click(function(){
-   SoundFile3.play();
+    document.getElementById("jk3").style = "display:inline";
+    SoundFile3.play();
   });
   
   $("#button4").click(function(){
-   SoundFile4.play();
+    document.getElementById("jk4").style = "display:inline";
+    SoundFile4.play();
   });
   
   $("#button5").click(function(){
-   SoundFile5.play();
+    document.getElementById("jk5").style = "display:inline";
+    SoundFile5.play();
   });
   
   $("#button6").click(function(){
-   SoundFile6.play();  
+    document.getElementById("jk6").style = "display:inline";
+    SoundFile6.play();  
+  });
+
+  SoundFile1.addEventListener('ended', function(){
+    document.getElementById("jk1").style = "display:none";
+  });
+
+  SoundFile2.addEventListener('ended', function(){
+    document.getElementById("jk2").style = "display:none";
+  });
+
+  SoundFile3.addEventListener('ended', function(){
+    document.getElementById("jk3").style = "display:none";
+  });
+
+  SoundFile4.addEventListener('ended', function(){
+    document.getElementById("jk4").style = "display:none";
+  });
+
+  SoundFile5.addEventListener('ended', function(){
+    document.getElementById("jk5").style = "display:none";
+  });
+
+  SoundFile6.addEventListener('ended', function(){
+    document.getElementById("jk6").style = "display:none";
   });
 });
 </script>
   
 </head>
 <body>
-<div id="c"><font size="20px">JK</font>
+
+<div id="pic" style="height:500px; width:300px;">
+  <img id="jk1" src="jk1.jpeg" height="480px" width="270px" style="display:none">
+  <img id="jk2" src="jk2.jpeg" height="480px" width="270px" style="display:none">
+  <img id="jk3" src="jk3.jpeg" height="480px" width="270px" style="display:none">
+  <img id="jk4" src="jk4.jpeg" height="480px" width="270px" style="display:none">
+  <img id="jk5" src="jk5.jpeg" height="480px" width="270px" style="display:none">
+  <img id="jk6" src="jk6.jpeg" height="480px" width="270px" style="display:none">
 </div>
 
 <div id="div1" style="height:50;">
