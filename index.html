@@ -7,7 +7,7 @@
   </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script>
-
+var img = "";
 $(document).ready(function(){
   var SoundFile1 = new Audio("sorry.m4a");
   var SoundFile2 = new Audio("eudi.m4a");
@@ -17,57 +17,124 @@ $(document).ready(function(){
   var SoundFile6 = new Audio("jang.m4a");
   
   $("#button1").click(function(){
+	if(img != ""){
+		document.getElementById(img).style = "display:none";
+	}
     document.getElementById("jk1").style = "height: 90%; width: auto; display:inline";
+	img = "jk1";
     SoundFile1.play();
   });
-
   $("#button2").click(function(){
+	if(img != ""){
+		document.getElementById(img).style = "display:none";
+	}
     document.getElementById("jk2").style = "height: 90%; width: auto; display:inline";
+	img = "jk2";
     SoundFile2.play();
   });
   
   $("#button3").click(function(){
+  	if(img != ""){
+		document.getElementById(img).style = "display:none";
+	}
     document.getElementById("jk3").style = "height: 90%; width: auto; display:inline";
+	img = "jk3";
     SoundFile3.play();
   });
   
   $("#button4").click(function(){
+  	if(img != ""){
+		document.getElementById(img).style = "display:none";
+	}
     document.getElementById("jk4").style = "height: 90%; width: auto; display:inline";
+	img = "jk4";
     SoundFile4.play();
   });
   
   $("#button5").click(function(){
+  	if(img != ""){
+		document.getElementById(img).style = "display:none";
+	}
     document.getElementById("jk5").style = "height: 90%; width: auto; display:inline";
+	img = "jk5";
     SoundFile5.play();
   });
   
   $("#button6").click(function(){
+  	if(img != ""){
+		document.getElementById(img).style = "display:none";
+	}
     document.getElementById("jk6").style = "height: 90%; width: auto; display:inline";
-    SoundFile6.play();  
+	img = "jk6";
+    SoundFile6.play();
   });
-
+  
+  $("#button7").click(function(){
+  	if(img != ""){
+		document.getElementById(img).style = "display:none";
+	}
+	playallseq = "jk1"
+	playall();
+  });
+  
+  var playallseq = "";
+  function playall(){
+	if(playalllist == ""){
+		break;
+	}else{
+		document.getElementById(playallseq).style = "height: 90%; width: auto; display:inline";
+		img = playallseq;
+		if(playallseq=="jk1"){
+			SoundFile1.play();
+			playallseq = "jk2";
+		}else if(playallseq=="jk2"){
+			SoundFile2.play();
+			playallseq = "jk3";
+		}else if(playallseq=="jk3"){
+			SoundFile3.play();
+			playallseq = "jk4";
+		}else if(playallseq=="jk4"){
+			SoundFile4.play();
+			playallseq = "jk5";
+		}else if(playallseq=="jk5"){
+			SoundFile5.play();
+			playallseq = "jk6";
+		}else if(playallseq=="jk6"){
+			SoundFile6.play();
+			playallseq = "";
+		}
+	}
+  }
+  
   SoundFile1.addEventListener('ended', function(){
     document.getElementById("jk1").style = "display:none";
-  });//style="max-width: 100%; height: auto;"
-
+	img = "";
+	playall();
+  });
   SoundFile2.addEventListener('ended', function(){
     document.getElementById("jk2").style = "display:none";
+	img = "";
+	playall();
   });
-
   SoundFile3.addEventListener('ended', function(){
     document.getElementById("jk3").style = "display:none";
+	img = "";
+	playall();
   });
-
   SoundFile4.addEventListener('ended', function(){
     document.getElementById("jk4").style = "display:none";
+	img = "";
+	playall();
   });
-
   SoundFile5.addEventListener('ended', function(){
     document.getElementById("jk5").style = "display:none";
+	img = "";
+	playall();
   });
-
   SoundFile6.addEventListener('ended', function(){
     document.getElementById("jk6").style = "display:none";
+	img = "";
+	playall();
   });
 });
 </script>
@@ -97,6 +164,7 @@ $(document).ready(function(){
           <button id="button4" style="font-size:50px">G</button>
           <button id="button5" style="font-size:50px">B</button>
           <button id="button6" style="font-size:50px">J</button>
+		  <button id="button7" style="font-size:50px">All</button>
         </div> 
     </th>
   </tr>
