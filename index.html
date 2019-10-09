@@ -20,11 +20,16 @@ $(document).ready(function(){
   
   var img = "";
   var playallseq = "";
-  
+  var list[] = {"jk1","jk2","jk3","jk4","jk5","jk6"};
+
+
   function alll(){
     if(playallseq == ""){
       return;
     }else{
+      for(var i=0; i<list.length; i++){
+        document.getElementById(list[i]).style = "display:none";
+      }
       document.getElementById(playallseq).style = "height: 90%; width: auto; display:inline";
       if(playallseq=="jk1"){
         SoundFile1.play();
