@@ -5,6 +5,8 @@
       html,body {height: 100%; overflow:hidden;}
       img {max-height:100%; width:auto;}
   </style>
+  <meta name="viewport" content="width=device-with, initial-scale=1">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script>
 
@@ -79,6 +81,7 @@ $(document).ready(function(){
     document.getElementById("jk1").style = "display:none";
     img = "";
     if(listseq=="jk1"){
+      alert(1);
       document.getElementById("jk2").style = "height: 90%; width: auto; display:inline";
       SoundFile2.play();
       listseq = "jk2";
@@ -88,6 +91,7 @@ $(document).ready(function(){
     document.getElementById("jk2").style = "display:none";
     img = "";
     if(listseq=="jk2"){
+      alert(2);
       document.getElementById("jk3").style = "height: 90%; width: auto; display:inline";
       SoundFile3.play();
       listseq = "jk3";
@@ -140,56 +144,6 @@ $(document).ready(function(){
   var playallseq = "";
   var list = ["jk1","jk2","jk3","jk4","jk5","jk6"];
   var listseq = "";
-
-  function alll(){
-    if(playallseq == ""){
-      return;
-    }else{
-      for(var i=0; i<list.length; i++){
-        document.getElementById(list[i]).style = "display:none";
-      }
-      document.getElementById(playallseq).style = "height: 90%; width: auto; display:inline";
-      if(playallseq=="jk1"){
-        SoundFile1.play();
-        playallseq = "jk2";
-      }else if(playallseq=="jk2"){
-        SoundFile2.play();
-        playallseq = "jk3";
-      }else if(playallseq=="jk3"){
-        SoundFile3.play();
-        playallseq = "jk4";
-      }else if(playallseq=="jk4"){
-        SoundFile4.play();
-        playallseq = "jk5";
-      }else if(playallseq=="jk5"){
-        SoundFile5.play();
-        playallseq = "jk6";
-      }else if(playallseq=="jk6"){
-        SoundFile6.play();
-        playallseq = "";
-      }
-    }
-  }
-
-  SoundFile1.addEventListener('ended', function(){
-    document.getElementById("jk1").style = "display:none";
-    img = "";
-    if(listseq=="jk1"){
-      document.getElementById("jk2").style = "height: 90%; width: auto; display:inline";
-      SoundFile2.play();
-      listseq = "jk2";
-    }
-  });
-  SoundFile2.addEventListener('ended', function(){
-    document.getElementById("jk2").style = "display:none";
-    img = "";
-    if(listseq=="jk2"){
-      document.getElementById("jk3").style = "height: 90%; width: auto; display:inline";
-      SoundFile3.play();
-      listseq = "jk3";
-    }
-  });
-
 
 
 </script>
