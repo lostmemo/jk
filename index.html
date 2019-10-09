@@ -68,40 +68,57 @@ $(document).ready(function(){
     if(img != ""){
       document.getElementById(img).style = "display:none";
     }
+    SoundFile1.play();
     playallseq = "jk1"
-    alll();
   });
   
   
   SoundFile1.addEventListener('ended', function(){
     document.getElementById("jk1").style = "display:none";
     img = "";
-    alll();
+    if(listseq=="jk1"){
+      SoundFile2.play();
+      listseq = "jk2";
+    }
   });
   SoundFile2.addEventListener('ended', function(){
     document.getElementById("jk2").style = "display:none";
     img = "";
-    alll();
+    if(listseq=="jk2"){
+      SoundFile3.play();
+      listseq = "jk3";
+    }
   });
   SoundFile3.addEventListener('ended', function(){
     document.getElementById("jk3").style = "display:none";
     img = "";
-    alll();
+    if(listseq=="jk3"){
+      SoundFile4.play();
+      listseq = "jk4";
+    }
   });
   SoundFile4.addEventListener('ended', function(){
     document.getElementById("jk4").style = "display:none";
     img = "";
-    alll();
+    if(listseq=="jk4"){
+      SoundFile5.play();
+      listseq = "jk5";
+    }
   });
   SoundFile5.addEventListener('ended', function(){
     document.getElementById("jk5").style = "display:none";
     img = "";
-    alll();
+    if(listseq=="jk5"){
+      SoundFile6.play();
+      listseq = "jk6";
+    }
   });
   SoundFile6.addEventListener('ended', function(){
     document.getElementById("jk6").style = "display:none";
     img = "";
-    alll();
+    if(listseq=="jk6"){
+      listseq = "";
+    }
   });
 });
 
@@ -115,7 +132,7 @@ $(document).ready(function(){
   var img = "";
   var playallseq = "";
   var list = ["jk1","jk2","jk3","jk4","jk5","jk6"];
-
+  var listseq = -1;
 
   function alll(){
     if(playallseq == ""){
