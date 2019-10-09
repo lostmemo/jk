@@ -11,53 +11,7 @@
 
 
 $(document).ready(function(){
-  
-});
-
-var SoundFile1 = new Audio("sorry.m4a");
-  var SoundFile2 = new Audio("eudi.m4a");
-  var SoundFile3 = new Audio("mok.m4a");
-  var SoundFile4 = new Audio("gab.m4a");
-  var SoundFile5 = new Audio("bukk.m4a");
-  var SoundFile6 = new Audio("jang.m4a");
-  
-  var img = "";
-  var playallseq = "";
-  var list = ["jk1","jk2","jk3","jk4","jk5","jk6"];
-
-
-  function alll(){
-    if(playallseq == ""){
-      return;
-    }else{
-      for(var i=0; i<list.length; i++){
-        document.getElementById(list[i]).style = "display:none";
-      }
-      document.getElementById(playallseq).style = "height: 90%; width: auto; display:inline";
-      if(playallseq=="jk1"){
-        SoundFile1.play();
-        playallseq = "jk2";
-      }else if(playallseq=="jk2"){
-        SoundFile2.play();
-        playallseq = "jk3";
-      }else if(playallseq=="jk3"){
-        SoundFile3.play();
-        playallseq = "jk4";
-      }else if(playallseq=="jk4"){
-        SoundFile4.play();
-        playallseq = "jk5";
-      }else if(playallseq=="jk5"){
-        SoundFile5.play();
-        playallseq = "jk6";
-      }else if(playallseq=="jk6"){
-        SoundFile6.play();
-        playallseq = "";
-      }
-    }
-  }
-
-
-  $("#button1").click(function(){
+    $("#button1").click(function(){
     if(img != ""){
         document.getElementById(img).style = "display:none";
       }
@@ -149,6 +103,52 @@ var SoundFile1 = new Audio("sorry.m4a");
     img = "";
     alll();
   });
+});
+
+  var SoundFile1 = new Audio("sorry.m4a");
+  var SoundFile2 = new Audio("eudi.m4a");
+  var SoundFile3 = new Audio("mok.m4a");
+  var SoundFile4 = new Audio("gab.m4a");
+  var SoundFile5 = new Audio("bukk.m4a");
+  var SoundFile6 = new Audio("jang.m4a");
+  
+  var img = "";
+  var playallseq = "";
+  var list = ["jk1","jk2","jk3","jk4","jk5","jk6"];
+
+
+  function alll(){
+    if(playallseq == ""){
+      return;
+    }else{
+      for(var i=0; i<list.length; i++){
+        document.getElementById(list[i]).style = "display:none";
+      }
+      document.getElementById(playallseq).style = "height: 90%; width: auto; display:inline";
+      if(playallseq=="jk1"){
+        SoundFile1.play();
+        playallseq = "jk2";
+      }else if(playallseq=="jk2"){
+        SoundFile2.play();
+        playallseq = "jk3";
+      }else if(playallseq=="jk3"){
+        SoundFile3.play();
+        playallseq = "jk4";
+      }else if(playallseq=="jk4"){
+        SoundFile4.play();
+        playallseq = "jk5";
+      }else if(playallseq=="jk5"){
+        SoundFile5.play();
+        playallseq = "jk6";
+      }else if(playallseq=="jk6"){
+        SoundFile6.play();
+        playallseq = "";
+      }
+    }
+  }
+
+
+
 
 </script>
   
