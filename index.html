@@ -16,132 +16,137 @@ $(document).ready(function(){
   var SoundFile5 = new Audio("bukk.m4a");
   var SoundFile6 = new Audio("jang.m4a");
   
+var playallseq = "";
+function alll(){
+  if(playallseq == ""){
+    return;
+  }else{
+    document.getElementById(playallseq).style = "height: 90%; width: auto; display:inline";
+    img = playallseq;
+    if(playallseq=="jk1"){
+      SoundFile1.play();
+      playallseq = "jk2";
+    }else if(playallseq=="jk2"){
+      SoundFile2.play();
+      playallseq = "jk3";
+    }else if(playallseq=="jk3"){
+      SoundFile3.play();
+      playallseq = "jk4";
+    }else if(playallseq=="jk4"){
+      SoundFile4.play();
+      playallseq = "jk5";
+    }else if(playallseq=="jk5"){
+      SoundFile5.play();
+      playallseq = "jk6";
+    }else if(playallseq=="jk6"){
+      SoundFile6.play();
+      playallseq = "";
+    }
+  }
+}
+
+
   $("#button1").click(function(){
-	if(img != ""){
-		document.getElementById(img).style = "display:none";
-	}
+  if(img != ""){
+    document.getElementById(img).style = "display:none";
+  }
     document.getElementById("jk1").style = "height: 90%; width: auto; display:inline";
-	img = "jk1";
+  img = "jk1";
     SoundFile1.play();
   });
   $("#button2").click(function(){
-	if(img != ""){
-		document.getElementById(img).style = "display:none";
-	}
+  if(img != ""){
+    document.getElementById(img).style = "display:none";
+  }
     document.getElementById("jk2").style = "height: 90%; width: auto; display:inline";
-	img = "jk2";
+  img = "jk2";
     SoundFile2.play();
   });
   
   $("#button3").click(function(){
-  	if(img != ""){
-		document.getElementById(img).style = "display:none";
-	}
+    if(img != ""){
+    document.getElementById(img).style = "display:none";
+  }
     document.getElementById("jk3").style = "height: 90%; width: auto; display:inline";
-	img = "jk3";
+  img = "jk3";
     SoundFile3.play();
   });
   
   $("#button4").click(function(){
-  	if(img != ""){
-		document.getElementById(img).style = "display:none";
-	}
+    if(img != ""){
+    document.getElementById(img).style = "display:none";
+  }
     document.getElementById("jk4").style = "height: 90%; width: auto; display:inline";
-	img = "jk4";
+  img = "jk4";
     SoundFile4.play();
   });
   
   $("#button5").click(function(){
-  	if(img != ""){
-		document.getElementById(img).style = "display:none";
-	}
+    if(img != ""){
+    document.getElementById(img).style = "display:none";
+  }
     document.getElementById("jk5").style = "height: 90%; width: auto; display:inline";
-	img = "jk5";
+  img = "jk5";
     SoundFile5.play();
   });
   
   $("#button6").click(function(){
-  	if(img != ""){
-		document.getElementById(img).style = "display:none";
-	}
+    if(img != ""){
+    document.getElementById(img).style = "display:none";
+  }
     document.getElementById("jk6").style = "height: 90%; width: auto; display:inline";
-	img = "jk6";
+  img = "jk6";
     SoundFile6.play();
   });
   
   $("#button7").click(function(){
-  	if(img != ""){
-		document.getElementById(img).style = "display:none";
-	}
-	playallseq = "jk1"
-	playall();
+    if(img != ""){
+    document.getElementById(img).style = "display:none";
+  }
+  playallseq = "jk1"
+  alll();
   });
   
-  var playallseq = "";
-  function playall(){
-	if(playalllist == ""){
-		break;
-	}else{
-		document.getElementById(playallseq).style = "height: 90%; width: auto; display:inline";
-		img = playallseq;
-		if(playallseq=="jk1"){
-			SoundFile1.play();
-			playallseq = "jk2";
-		}else if(playallseq=="jk2"){
-			SoundFile2.play();
-			playallseq = "jk3";
-		}else if(playallseq=="jk3"){
-			SoundFile3.play();
-			playallseq = "jk4";
-		}else if(playallseq=="jk4"){
-			SoundFile4.play();
-			playallseq = "jk5";
-		}else if(playallseq=="jk5"){
-			SoundFile5.play();
-			playallseq = "jk6";
-		}else if(playallseq=="jk6"){
-			SoundFile6.play();
-			playallseq = "";
-		}
-	}
-  }
   
   SoundFile1.addEventListener('ended', function(){
     document.getElementById("jk1").style = "display:none";
-	img = "";
-	playall();
+  img = "";
+  alll();
   });
   SoundFile2.addEventListener('ended', function(){
     document.getElementById("jk2").style = "display:none";
-	img = "";
-	playall();
+  img = "";
+  alll();
   });
   SoundFile3.addEventListener('ended', function(){
     document.getElementById("jk3").style = "display:none";
-	img = "";
-	playall();
+  img = "";
+  alll();
   });
   SoundFile4.addEventListener('ended', function(){
     document.getElementById("jk4").style = "display:none";
-	img = "";
-	playall();
+  img = "";
+  alll();
   });
   SoundFile5.addEventListener('ended', function(){
     document.getElementById("jk5").style = "display:none";
-	img = "";
-	playall();
+  img = "";
+  alll();
   });
   SoundFile6.addEventListener('ended', function(){
     document.getElementById("jk6").style = "display:none";
-	img = "";
-	playall();
+  img = "";
+  alll();
   });
 });
+
+
+
 </script>
   
 </head>
 <body>
-<table style="height:95%;width:95%">
+<table style="height:95%; width:95%">
   <tr>
     <th>
       <div id="pic">
@@ -157,7 +162,7 @@ $(document).ready(function(){
   </tr>
   <tr style="height:50px">
     <th>
-        <div id="div1" align="" style="height:50px;">
+        <div id="div1" align="">
           <button id="button1" style="font-size:50px">S</button>
           <button id="button2" style="font-size:50px">E</button>
           <button id="button3" style="font-size:50px">M</button>
@@ -169,11 +174,11 @@ $(document).ready(function(){
   </tr>
   <tr style="height:50px">
     <th>
-        <div id="div1" align="" style="height:50px;">
-	  <button id="button7" style="font-size:50px">All</button>
+        <div id="div1" align="">
+    <button id="button7" style="font-size:50px">All</button>
         </div> 
     </th>
-  </tr>	
+  </tr> 
 </table>
 </body>
   
