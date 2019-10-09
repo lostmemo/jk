@@ -180,7 +180,15 @@ $(document).ready(function(){
       listseq = "jk2";
     }
   });
-
+  SoundFile2.addEventListener('ended', function(){
+    document.getElementById("jk2").style = "display:none";
+    img = "";
+    if(listseq=="jk2"){
+      document.getElementById("jk3").style = "height: 90%; width: auto; display:inline";
+      SoundFile3.play();
+      listseq = "jk3";
+    }
+  });
 
 
 
