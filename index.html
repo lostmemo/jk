@@ -1,3 +1,24 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@lostmemo 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+1
+01lostmemo/jk
+ Code Issues 0 Pull requests 0 Projects 0 Wiki Security Insights Settings
+jk/index.html
+@lostmemo lostmemo Update index.html
+26f0c8c 2 days ago
+190 lines (172 sloc)  5.28 KB
+  
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,9 +29,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script>
-
-
-
 $(document).ready(function(){
   $("#button1").click(function(){
     if(img != ""){
@@ -73,66 +91,49 @@ $(document).ready(function(){
     img = "img1";
     document.getElementById("jk1").style = "height: 90%; width: auto; display:inline";
     SoundFile1.play();
+    setTimeout(function() {
+        SountFile2.play();
+    },3000);
+	setTimeout(function() {
+        SountFile3.play();
+    },6000);
+	setTimeout(function() {
+        SountFile4.play();
+    },9000);
+	setTimeout(function() {
+        SountFile5.play();
+    },12000);
+	setTimeout(function() {
+        SountFile6.play();
+    },15000);
   });
   
   
   SoundFile1.addEventListener('ended', function(){
     document.getElementById("jk1").style = "display:none";
     img = "";
-    if(listseq=="jk1"){
-      alert(1);
-      listseq = "jk2";
-      document.getElementById("jk2").style = "height: 90%; width: auto; display:inline";
-      SoundFile2.play();
-    }
-    alert(11);
   });
   SoundFile2.addEventListener('ended', function(){
     document.getElementById("jk2").style = "display:none";
     img = "";
-    if(listseq=="jk2"){
-      alert(2);
-      listseq = "jk3";
-      document.getElementById("jk3").style = "height: 90%; width: auto; display:inline";
-      SoundFile3.play();
-    }
   });
   SoundFile3.addEventListener('ended', function(){
     document.getElementById("jk3").style = "display:none";
     img = "";
-    if(listseq=="jk3"){
-      listseq = "jk4";
-      document.getElementById("jk4").style = "height: 90%; width: auto; display:inline";
-      SoundFile4.play();
-    }
   });
   SoundFile4.addEventListener('ended', function(){
     document.getElementById("jk4").style = "display:none";
     img = "";
-    if(listseq=="jk4"){
-      listseq = "jk5";
-      document.getElementById("jk5").style = "height: 90%; width: auto; display:inline";
-      SoundFile5.play();
-    }
   });
   SoundFile5.addEventListener('ended', function(){
     document.getElementById("jk5").style = "display:none";
     img = "";
-    if(listseq=="jk5"){
-      listseq = "jk6";
-      document.getElementById("jk6").style = "height: 90%; width: auto; display:inline";
-      SoundFile6.play();
-    }
   });
   SoundFile6.addEventListener('ended', function(){
     document.getElementById("jk6").style = "display:none";
     img = "";
-    if(listseq=="jk6"){
-      listseq = "";
-    }
   });
 });
-
   var SoundFile1 = new Audio("sorry.m4a");
   var SoundFile2 = new Audio("eudi.m4a");
   var SoundFile3 = new Audio("mok.m4a");
@@ -144,8 +145,6 @@ $(document).ready(function(){
   var playallseq = "";
   var list = ["jk1","jk2","jk3","jk4","jk5","jk6"];
   var listseq = "";
-
-
 </script>
   
 </head>
