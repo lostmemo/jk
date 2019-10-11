@@ -70,12 +70,26 @@ $(document).ready(function(){
     img = "img1";
     //document.getElementById("jk1").style = "height: 90%; width: auto; display:inline";
     if(playallseq == 0){
+      SoundFile1.volume = 0.1;
+      SoundFile2.volume = 0.1;
+      SoundFile3.volume = 0.1;
+      SoundFile4.volume = 0.1;
+      SoundFile5.volume = 0.1;
+      SoundFile6.volume = 0.1;
+      
       SoundFile1.play();
       SoundFile2.play();
       SoundFile3.play();
       SoundFile4.play();
       SoundFile5.play();
       SoundFile6.play();
+      
+      SoundFile1.volume = 1;
+      SoundFile2.volume = 1;
+      SoundFile3.volume = 1;
+      SoundFile4.volume = 1;
+      SoundFile5.volume = 1;
+      SoundFile6.volume = 1;
       playallseq = playallseq + 1;
     }else{
       SoundFile1.play();
@@ -171,7 +185,7 @@ $(document).ready(function(){
   <tr style="height:50px">
     <th>
         <div id="div1" align="">
-    <button id="button7" style="font-size:50px">All5</button>
+    <button id="button7" style="font-size:50px">All6</button>
         </div> 
     </th>
   </tr> 
