@@ -68,42 +68,63 @@ $(document).ready(function(){
     }
     listseq = "jk1";
     img = "img1";
-    document.getElementById("jk1").style = "height: 90%; width: auto; display:inline";
-    SoundFile1.play();
-    SoundFile2.play().delay(3000);
-    SoundFile3.play().delay(6000);
-    SoundFile4.play().delay(9000);
-    SoundFile5.play().delay(12000);
-    SoundFile6.play().delay(15000);
+    //document.getElementById("jk1").style = "height: 90%; width: auto; display:inline";
+    if(playallseq == 0){
+      SoundFile1.play();
+      SoundFile2.play();
+      SoundFile3.play();
+      SoundFile4.play();
+      SoundFile5.play();
+      SoundFile6.play();
+      playallseq = playallseq + 1;
+    }else{
+      SoundFile1.play();
+      playallseq = playallseq + 1;
+    }
   });
   
   
   SoundFile1.addEventListener('ended', function(){
     document.getElementById("jk1").style = "display:none";
     img = "";
-    SoundFile2.play();
+    if(playallseq>1){
+      SoundFile2.play();
+    }
   });
   SoundFile2.addEventListener('ended', function(){
     document.getElementById("jk2").style = "display:none";
     img = "";
-    SoundFile3.play();
+    if(playallseq>1){
+      SoundFile3.play();
+    }
   });
   SoundFile3.addEventListener('ended', function(){
     document.getElementById("jk3").style = "display:none";
     img = "";
-    SoundFile4.play();
+    if(playallseq>1){
+      SoundFile4.play();
+    }
   });
   SoundFile4.addEventListener('ended', function(){
     document.getElementById("jk4").style = "display:none";
     img = "";
+    if(playallseq>1){
+      SoundFile5.play();
+    }
   });
   SoundFile5.addEventListener('ended', function(){
     document.getElementById("jk5").style = "display:none";
     img = "";
+    if(playallseq>1){
+      SoundFile6.play();
+    }
   });
   SoundFile6.addEventListener('ended', function(){
     document.getElementById("jk6").style = "display:none";
     img = "";
+    if(playallseq>1){
+      playallseq = 1;
+    }
   });
 });
   var SoundFile1 = new Audio("sorry.m4a");
@@ -114,7 +135,7 @@ $(document).ready(function(){
   var SoundFile6 = new Audio("jang.m4a");
   
   var img = "";
-  var playallseq = "";
+  var playallseq = 0;
   var list = ["jk1","jk2","jk3","jk4","jk5","jk6"];
   var listseq = "";
 </script>
