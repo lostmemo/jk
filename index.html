@@ -84,14 +84,21 @@ $(document).ready(function(){
       SoundFile5.play();
       SoundFile6.play();
       
+      // SoundFile1.volume = 1;
+      // SoundFile2.volume = 1;
+      // SoundFile3.volume = 1;
+      // SoundFile4.volume = 1;
+      // SoundFile5.volume = 1;
+      // SoundFile6.volume = 1;
+      playallseq = playallseq + 1;
+    }else{
       SoundFile1.volume = 1;
       SoundFile2.volume = 1;
       SoundFile3.volume = 1;
       SoundFile4.volume = 1;
       SoundFile5.volume = 1;
       SoundFile6.volume = 1;
-      playallseq = playallseq + 1;
-    }else{
+
       SoundFile1.play();
       playallseq = playallseq + 1;
     }
@@ -136,9 +143,30 @@ $(document).ready(function(){
   SoundFile6.addEventListener('ended', function(){
     document.getElementById("jk6").style = "display:none";
     img = "";
-    if(playallseq>1){
+    if(playallseq==1 ){
+      // alert(1);
+      SoundFile1.volume = 1;
+      SoundFile2.volume = 1;
+      SoundFile3.volume = 1;
+      SoundFile4.volume = 1;
+      SoundFile5.volume = 1;
+      SoundFile6.volume = 1;
+
+      playallseq = playallseq + 1;
+      SoundFile1.play();
+    }else if(playallseq>1){
       playallseq = 1;
     }
+
+    // if(pladyallseq==0){
+    //   SoundFile1.volume = 1;
+    //   SoundFile2.volume = 1;
+    //   SoundFile3.volume = 1;
+    //   SoundFile4.volume = 1;
+    //   SoundFile5.volume = 1;
+    //   SoundFile6.volume = 1;
+    //   playallseq = playallseq + 1;
+    // }
   });
 });
   var SoundFile1 = new Audio("sorry.m4a");
@@ -185,7 +213,7 @@ $(document).ready(function(){
   <tr style="height:50px">
     <th>
         <div id="div1" align="">
-    <button id="button7" style="font-size:50px">All6</button>
+    <button id="button7" style="font-size:50px">All7</button>
         </div> 
     </th>
   </tr> 
